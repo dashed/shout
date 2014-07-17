@@ -1,3 +1,5 @@
+var URI = require('URIjs');
+
 function escape(text) {
 	var e = {
 		"<": "&lt;",
@@ -13,7 +15,7 @@ Handlebars.registerHelper(
 		var urls = [];
 		text = URI.withinString(text, function(url) {
 			urls.push(url);
-			return "$(" + (urls.length - 1) + ")";	
+			return "$(" + (urls.length - 1) + ")";
 		});
 		text = escape(text);
 		for (var i in urls) {

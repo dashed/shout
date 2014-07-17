@@ -24,6 +24,3 @@ fs.readFileAsync("./config.json", "utf8")
     .catch(function(e) {
         console.log(e);
     });
-
-
-
